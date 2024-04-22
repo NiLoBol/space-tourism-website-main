@@ -41,7 +41,7 @@ function page() {
             <span className="text-textdark">02</span> MEET YOUR CREW
           </div>
           {/* mobile */}
-          <div>
+          <div className="sm:hidden">
             <Imagedetail></Imagedetail>
           </div>
           <div className="flex justify-center sm:hidden mb-8 ">

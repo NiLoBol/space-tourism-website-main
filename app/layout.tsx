@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className+" font-Bellefair overflow-hidden"}>
+      <body className={inter.className+" font-Bellefair overflow-hidden max-sm:touch-none"}>
         
         {children}</body>
     </html>
