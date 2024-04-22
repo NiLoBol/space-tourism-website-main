@@ -12,11 +12,22 @@ type Propstype = {
 };
 function Nav(props: Propstype) {
   const [isOpen, setIsOpen] = useState<"close" | "open">("close");
+  const [show, setshow] = useState<"close" | "open">("close");
+  useEffect(() => {
+    if(isOpen==="open"){
+      setshow("open")
+    }
+    else{
+      setTimeout(() => {
+        setshow("close")
+      }, 200);
+      
+    }
 
+  }, [isOpen]);
 
-  
   return (
-    <div className="grid grid-cols-5 md:gap-4 gap-0 xl:py-10  w-screen overflow-hidden">
+    <div className="grid grid-cols-5 md:gap-4 gap-0 xl:py-10  w-screen  overflow-hidden">
       <div className="col-span-2 ">
         <div className="flex flex-row items-center h-full">
           <Image
@@ -35,8 +46,8 @@ function Nav(props: Propstype) {
       <div
         className="col-span-2 md:hidden absolute right-0"
         onClick={() => {
-          if(isOpen === "close"){
-          setIsOpen("open");
+          if (isOpen === "close") {
+            setIsOpen("open");
           }
         }}
       >
@@ -78,21 +89,21 @@ function Nav(props: Propstype) {
       </div>
       <motion.div
         className={
-          "absolute w-80 h-screen backdrop-blur-xl bg-white/10 right-0 sm:hidden"
+          "absolute w-80 h-screen backdrop-blur-xl bg-white/10 right-0 sm:hidden " + (show=="close"?"max-sm:hidden":"max-sm:touch-none")
         }
         id="mobileMenu"
         initial={{ opacity: 1, x: 320 }}
         animate={
           isOpen === "open" ? { opacity: 1, x: 0 } : { opacity: 1, x: 320 }
         }
-        transition={{ duration: 0.7, ease: [0.64, 0.09, 0.08, 1] }}
+        transition={{ duration: 0.2, ease: [0.64, 0.09, 0.08, 1] }}
       >
         <div className="flex flex-col flex-wrap">
           <div
             className="absolute right-0 "
             onClick={() => {
-              if(isOpen==='open'){
-              setIsOpen("close");
+              if (isOpen === "open") {
+                setIsOpen("close");
               }
             }}
           >
@@ -104,8 +115,7 @@ function Nav(props: Propstype) {
               alt="Picture of the author"
             ></Image>
           </div>
-          <div className="h-[120px] border-e-white">
-          </div>
+          <div className="h-[120px] border-e-white"></div>
           <NavButtonMobile
             href="/"
             ID="00"

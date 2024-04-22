@@ -30,7 +30,7 @@ function page() {
   }, [active]);
 
   return (
-    <div className="min-h-screen bg-DestinationBG-Desktop bg-cover bg-no-repeat text-heading">
+    <div className="min-h-screen bg-DestinationBG-Desktop bg-cover bg-no-repeat text-heading ">
       <Nav active="Destination"></Nav>
       <div className="uppercase text-heading text-sub1 2xl:ms-64 xl:ms-40 md:ms-10 max-sm:text-center 2xl:mt-16 xl:mt-12 md:mt-10 my-6 ">
         {" "}

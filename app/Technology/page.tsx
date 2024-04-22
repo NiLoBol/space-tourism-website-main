@@ -29,7 +29,7 @@ function page() {
     );
   };
   return (
-    <div className="h-screen bg-Technology-Desktop bg-cover bg-no-repeat text-heading overflow-hidden ">
+    <div className="h-screen bg-Technology-Desktop bg-cover bg-no-repeat text-heading overflow-hidden max-sm:touch-none">
       <Nav active="Technology"></Nav>
 
       <div className="grid xl:grid-cols-2 grid-cols-1  2xl:gap-10 xl:gap-0 2xl:mx-64 xl:mx-40 mt-10">

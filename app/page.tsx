@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
     return (
-      <div className="min-h-screen md:bg-homeTBG xl:bg-homeDBG max-sm:bg-homeMBG  bg-cover">
+      <div className="min-h-screen md:bg-homeTBG xl:bg-homeDBG max-sm:bg-homeMBG  bg-cover max-sm:touch-none">
         <Nav active="Home"></Nav>
 
         {/* ///main content here/// */}

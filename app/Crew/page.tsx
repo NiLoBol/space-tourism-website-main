@@ -32,7 +32,7 @@ function page() {
     );
   };
   return (
-    <div className="h-screen bg-Crew-Desktop bg-cover bg-no-repeat text-heading  ">
+    <div className="h-screen bg-Crew-Desktop bg-cover bg-no-repeat text-heading md:overflow-hidden max-sm:touch-none ">
       <Nav active="Crew"></Nav>
 
       <div className="grid grid-cols-11  2xl:gap-10 xl:gap-0 2xl:mx-64 xl:ms-40 xl:me-20 mt-10">
