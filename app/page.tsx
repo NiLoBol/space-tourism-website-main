@@ -11,7 +11,7 @@ export default function Home() {
         <Nav active="Home"></Nav>
 
         {/* ///main content here/// */}
-        <div className="flex flex-row flex-wrap xl:mx-52 xl:mt-52 max-lg:mt-24">
+        <div className="flex flex-row  2xl:mx-52 2xl:mt-52 xl:mx-32 mt-32 max-lg:mt-24">
           <div className="xl:basis-1/2 basis-full">
             <div className="sm:mx-auto mx-6 md:w-[500px]  max-lg:text-center ">
               <div className="text-title text-sub1 uppercase ">
